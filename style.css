@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap'); /* importação de fonte estilo Poppins do Google Fontes*/
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* referente ao link de importação de fonte acima*/
+    list-style: none;
+    text-decoration: none;
+}
+
+:root{
+    --red: #d63a25;
+    --white: #fff;
+    --dark:#1e1C2a; 
+}
+
+body{
+    color: var(--dark);
+    background: var(--white);
+}
+
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 40px;
+    box-shadow: 0 0.1rem 0.5rem #ccc; /*barra que separa a navegação e o conteúdo do site*/
+    width: 100%;
+    background: var(--white);
+    transition: all 0.5s; 
+    position: fixed;
+}
+
+/*estilização da logo*/
+.navigation .logo{
+    color: var(--red);
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+/*estilização do span - as letras que estão dentro de span receberão essa estilização*/
+.logo span{
+    color: var(--dark);
+}
+
+/* separar os ítens que estão no cabeçalho de navegação e colocá-los na horizontal: */
+.navigation ul{
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+.navigation ul li a{
+    color: var(--dark);
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+.navigation ul li a:hover{  /*cor quando o mouse passar por cima dos ítens da barra de navegação*/
+    color: var(--red);
+}
+
+/* estilizando o ícone de pesquisa (search) do Boxicons*/
+.navigation i{
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+
+/*estilização do menú para aparecer a mãozinha quando passar o mouse encima*/
+.menu {
+    cursor: pointer;
+}
+
+
+/*barrinhas da barra de navegação*/
+.menu .bar{
+    display: block;
+    width: 28px;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--dark);
+    margin: 5px auto;
+    transition: all 0.3s;
+}
+.menu .bar:nth-child(1), /* barrinha 1 */
+.menu .bar:nth-child(3){ /* barrinha 3 */
+    background: var(--red);
+}
+
+/*para arrumar a localização/espaço da imagem e do texto dentro da tela*/
+.home{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10%;
+}
+
+.home-text{
+    max-width: 37rem;
+}
+.home-text .text-h4{
+   font-size: 1.5rem;
+   color: var(--red);
+   margin-bottom: 1rem;
+}
+.home-text .text-h1{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    line-height: 4rem;
+ }
+ .home-text p{
+    margin-bottom: 4rem;
+ }
+ /* botão: */
+ .home-btn{
+    padding: 15px 45px;
+    background: var(--red);
+    color: var(--white);
+    border-radius: 10px;
+    font-weight: 700;
+    transition: all 0.5s;
+ }
+ .home-btn:hover{
+    background: #fc4c35; /*cor que aparecerá no botão quando passar o mouse por cima */
+ }
+
+ .home-img img {
+    width: 100%;
+ }
+
+ /* configuração do site visto por celular*/
+ @media ( max-width: 785px;){
+    .navigation{
+        padding: 18px 20px;
+    }
+    .menu{
+        display: block;
+    }
+    .nav-menu{
+        position:fixed;
+        right: -100%;
+        top: 70px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background: var(--white);
+        gap: -10px;
+        transition: 0.3s;
+    }
+    .nav-item{
+        margin: 16px 0;
+    }
+ }
+
+
