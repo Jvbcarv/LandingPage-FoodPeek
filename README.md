@@ -1,4 +1,4 @@
-LandingPage com HTML e CSS.
+LandingPage feita com HTML e CSS.
 
 Visualização da página: https://jvbcarv.github.io/LandingPage-FoodPeek/ 
 
